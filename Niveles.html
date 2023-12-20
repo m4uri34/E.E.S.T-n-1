@@ -9,7 +9,7 @@
     <title>E.E.S.T.Nº1 Muñiz| Niveles</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header">    
         <nav class="nav">
             <ul class="ul">
                 <li class="li"><a href="index.html" class="a">Inicio</a></li>
@@ -18,6 +18,9 @@
                 <li class="li"><a href="#" class="a">Autoridades</a></li>
             </ul>
         </nav>
+        <button class="button" onclick="toggleImage()">
+            <img id="menuIcon" class="svg" src="img/bars-solid.svg" alt="">
+        </button>
         <div class="section">
             <div class="white-bar">
                 <div class="eest-text">
@@ -28,8 +31,9 @@
             </div>
             <img src="img/liquid-cheese.png" alt="" class="section-background">
         </div>
+        
     </header>
-    <main>
+    <main class="main">
         <h1>Educación Secundaria Técnica</h1>
         <div class="nivel">
             <div class="text">
@@ -49,7 +53,7 @@
                     </ul>
                 </div>
                 <div class="temas">
-                    <h4>Segundo año año:</h4>
+                    <h4>Segundo año:</h4>
                     <ul>
                         <li>Electricidad</li>
                         <li>Carpintería</li>
@@ -186,5 +190,6 @@
             </a>
         </div>
     </footer>
+    <script src="script/menu.js"></script>
 </body>
 </html>

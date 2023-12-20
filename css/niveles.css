@@ -43,6 +43,9 @@ html, body {
     position: relative; 
 }
 
+.header .button{
+    display: none;
+}
 .header .nav {
     position: absolute;
     z-index: 3; 
@@ -145,7 +148,6 @@ span{
 }
 
 .white-bar a{
-    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,7 +214,7 @@ main h1, main h2, main h4{
 }
 .temas{
     width: 350px;
-    height: 190px;
+    min-height: 190px;
     flex-direction: column;
     justify-content: start;
     display: flex;
@@ -318,4 +320,107 @@ li:active {
 }
 .logo-a img{
     width: 100%;
+}
+@media screen and (min-width: 209px) and (max-width:970px) {
+    html, body {
+        height: 100%;
+    }
+    .header .button{
+        display: flex;
+        position: absolute;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        z-index: 5;
+        margin: 4%;
+    }
+    .header .svg{
+        width: 40px;
+    }
+    .header .nav{
+        width:100%;
+        /* display: none; */
+        height:0;
+        pointer-events: none;
+        overflow: hidden;
+        transition: all .5s ease;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .header {
+        transition: opacity 0.3s ease;
+        opacity: 1;
+    }
+    .header.activo{
+        background-color: #17181D;
+    }
+    .header .nav.activo{
+        /* display: block; */
+        background-color: #17181D;
+        height:100vh;
+        pointer-events: auto;
+    }
+    .header .svg.activo{
+        fill:#ffff;
+        z-index: 5;
+        
+    }
+    .header .ul{
+        flex-direction: column;
+        padding: 0;
+    }
+    .header .li{
+        margin: 1rem 0;
+        color: #ffff;
+    }
+    .header .li{
+        /*width: 100px;*/
+        justify-content: center;
+        display: flex;
+        background-color: #1c1e25;
+        color: #FF4E4E;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+    }
+    .section.activo{
+        display: none;
+    }
+    .main.activo{
+        display: none;
+    }
+    .footer.activo{
+        display: none;
+    }
+    .main{
+        padding: 5% 0;
+        text-align: center;
+    }
+    .temas-container{
+        width: 95%;
+    }
+    .footer{
+        padding: 5% 0;
+    }
+    .footer .ul{
+        flex-direction: column;
+        padding: 0;
+        margin: 2% 0;
+    }
+    .footer .li{
+        padding: 1.2em 1em;
+        margin-bottom: 5px;
+    }
+    .container-footer{
+        width: 90%;
+        justify-content: space-between;
+        flex-direction: row;
+        display: flex;
+    }
+    .footer-text{
+        width: 65%;
+    }
+    .logo-a{
+        width: 20%;
+    }
 }
