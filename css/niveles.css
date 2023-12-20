@@ -214,14 +214,34 @@ main h1, main h2, main h4{
     width: 350px;
     height: 190px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     display: flex;
-    text-align: center;
-    border: solid 1px #c0c0c0;
-    border-radius: 20px;
+    text-align: start;
+    border-radius: 5px;
+    padding: 1% 2%;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
-.tema-general{
+.tema-general,ul li{
     font-weight: bold;
+    padding-bottom: 4px;
+}
+details summary{
+    margin-bottom: 4px;
+    color: #000000;
+    padding: 5px;
+}
+details summary:hover, .tema-general:hover{
+    background-color: #efefef;
+    color: #000;
+}
+details[open] summary{
+    width: fit-content;
+    background-color: #ff4081;
+    color: #ffff;
+    padding: 5px;
+    border-radius: 15px;
 }
 /*----------- FOOTER-------------*/
 .footer{
