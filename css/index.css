@@ -42,7 +42,9 @@ html, body {
     flex-direction: row;
     position: relative; 
 }
-
+.header .button{
+    display: none;
+}
 .header .nav {
     position: absolute;
     z-index: 3; 
@@ -58,7 +60,7 @@ html, body {
     margin: 2% 0;
 }
 
-li {
+.header li {
     padding: 1.3em 3em;
     font-size: 12px;
     text-transform: uppercase;
@@ -80,10 +82,10 @@ li {
     width: 200px;
     text-align: center;
 }
-li:hover{
+.header li:hover{
     background-color: #ffffffee;
 }
-li:active {
+.header li:active {
     transform: translateY(2px);
 }
 /*--------------------------*/
@@ -111,17 +113,22 @@ li:active {
     flex-direction: column;
 }
 
-.white-bar h1{
+.eest-text{
     width: 116%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 35%;
+}
+.eest{
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 432%;
     display: flex;
     overflow-x: visible;
-    margin-left: 35%;
+
 }
 
 .white-bar a{
-    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,10 +152,7 @@ li:active {
 .white-bar a:active{
     transform: translateY(2px);
 }
-.school-logo{
-    position: absolute;
-    z-index: 3;
-}
+
 /*------TEXTO INFORMATIVO + SLIDER--------*/
 
 .container-text-slider{
@@ -365,4 +369,149 @@ li:active {
 .logo-a img{
     width: 100%;
 }
-/*------ MODO OSCURO ----------*/
+@media screen and (max-width:970px) {
+    html, body {
+        height: 100%;
+    }
+    .header {
+        transition: opacity 0.3s ease;
+        opacity: 1;
+        height: 400px;
+    }
+    .header .nav{
+        width:100%;
+        /* display: none; */
+        height:0;
+        pointer-events: none;
+        overflow: hidden;
+        transition: all .5s ease;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .header .button{
+        display: flex;
+        position: absolute;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        z-index: 5;
+        margin: 4%;
+    }
+    .header .svg{
+        width: 40px;
+    }
+    .header .ul{
+        flex-direction: column;
+        padding: 0;
+    }
+    .header .li{
+        /*width: 100px;*/
+        margin: 1rem 0;
+        justify-content: center;
+        display: flex;
+        background-color: #1c1e25;
+        color: #FF4E4E;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+        font-weight: bold;
+    }
+    .white-bar{
+        width: 45%;
+    }
+    .white-bar a {
+        font-weight: bold;
+    }
+    .eest, span{
+        font-size: xx-large;
+    }
+    /*--------- estilos parte del MENU ----------*/
+    .header.activo{
+        background-color: #17181D;
+    }
+    .header .nav.activo{
+        /* display: block; */
+        background-color: #17181D;
+        height:100vh;
+        pointer-events: auto;
+    }
+    .header .svg.activo{
+        fill:#ffff;
+        z-index: 5;
+        
+    }
+    .section.activo{
+        display: none;
+    }
+    .main.activo{
+        display: none;
+    }
+    .footer.activo{
+        display: none;
+    }
+    #slidercont.activo{
+        display: none;
+    }
+    /*-------------------------*/
+
+    .temas-container{
+        width: 95%;
+    }
+    .text p{
+        font-weight: bold;
+    }
+    .footer{
+        padding: 5% 0;
+    }
+    .footer .ul{
+        flex-direction: column;
+        padding: 0;
+        margin: 2% 0;
+    }
+    .footer .li{
+        padding: 1.2em 1em;
+        margin-bottom: 5px;
+    }
+    .container-footer{
+        width: 90%;
+        justify-content: space-between;
+        flex-direction: row;
+        display: flex;
+    }
+    .footer-text{
+        width: 65%;
+        font-weight: bold;
+    }
+    .footer-text p{
+        margin: 10px 0;
+    }
+    .logo-a{
+        width: 20%;
+    }
+
+
+    .container-text-slider{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .information-text h3 {
+        width: 90%;
+        margin: 1% 0;
+    }
+    .slider{
+        width: 80%;
+        height: 65%;
+    }
+    .main{
+        padding: 2%;
+    }
+    .text{
+        letter-spacing: 0;
+        margin: 0;
+    }
+    .orientacion-img{
+        width: 40%;
+        height: 50%;
+    }
+}

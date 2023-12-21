@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.querySelector('.button');
     const nav = document.querySelector('.nav');
@@ -8,9 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const section = document.querySelector('.section');
     const svg = document.querySelector('.svg');
     const footer = document.querySelector('.footer');
+    const slidercont = document.querySelector('#slidercont');
 
     button.addEventListener('click', () => {
         if (header) {
+            
             section.classList.toggle('activo');
             nav.classList.toggle('activo');
             main.classList.toggle('activo');

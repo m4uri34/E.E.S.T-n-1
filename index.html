@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>E.E.S.T.Nº1 Muñiz</title>
-        
         <link rel="website icon" type="png" href="img/EEST logotype.png">
         <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -20,15 +19,20 @@
                     <li class="li"><a href="#" class="a">Autoridades</a></li>
                 </ul>
             </nav>
+            <button class="button" onclick="toggleImage()">
+                <img id="menuIcon" class="svg" src="img/bars-solid.svg" alt="">
+            </button>
             <div class="section">
                 <div class="white-bar">
-                    <h1 class="eest">ESCUELA de EDUCACION SECUNDARIA TECNICA Nº1 DE MUÑIZ</h1>
-                    <a href="#">Niveles</a>
+                    <div class="eest-text">
+                        <h1 class="eest">ESCUELA de EDUCACION SECUNDARIA TECNICA Nº1 DE MUÑIZ</h1>
+                    </div>
+                    <a href="Niveles.html">Niveles</a>
                 </div>
                 <img src="img/liquid-cheese.png" alt="" class="section-background">
             </div>
         </header>
-        <div class="container-text-slider">
+        <div id="slidercont" class="container-text-slider">
             <div class="information-text">
                 <h1>E.E.S.T Nº 1</h1>
                 <h3>La Escuela Técnica Nº1 Nuestra Señora del Valle de Muñiz, activa y estatal, destaca por su especialización en informática y electromecánica. Situada en Muñiz, San Miguel, Buenos Aires, ofrece programas educativos centrados en tecnología para formar a sus estudiantes en esos campos.</h3>
@@ -87,7 +91,7 @@
             </div>
         </div>
         
-        <main>
+        <main class="main">
             <h1>Niveles</h1>
             <div class="nivel">
                 <div class="text">
@@ -133,5 +137,9 @@
                 </a>
             </div>
         </footer>
+        <script src="script/menu.js"></script>
+        <script>
+            slidercont.classList.toggle('activo');
+        </script>
     </body>
 </html>

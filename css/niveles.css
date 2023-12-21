@@ -321,7 +321,7 @@ li:active {
 .logo-a img{
     width: 100%;
 }
-@media screen and (min-width: 209px) and (max-width:970px) {
+@media screen and (max-width:970px) {
     html, body {
         height: 100%;
     }
