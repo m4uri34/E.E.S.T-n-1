@@ -59,9 +59,12 @@ html, body {
     list-style: none;
     margin: 2% 0;
 }
-
-.header li {
+.header li a{
+    width: 200px;
     padding: 1.3em 3em;
+    border-radius: 45px;
+}
+.header li{
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -81,11 +84,12 @@ html, body {
     margin: 0 1% 0 0;
     width: 200px;
     text-align: center;
+    display: flex;
 }
-.header li:hover{
+.header li a:hover{
     background-color: #ffffffee;
 }
-.header li:active {
+.header li a:active {
     transform: translateY(2px);
 }
 /*--------------------------*/
